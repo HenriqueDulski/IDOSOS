@@ -11,18 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const quizFeedback = document.getElementById("quiz-feedback");
 
     // ==========================================================================
-    // 2. SISTEMA DE ACESSIBILIDADE (Fácil leitura)
+    // 2. SISTEMA DE ACESSIBILIDADE (Facil leitura)
     // ==========================================================================
 
     // Ativar / Desativar Texto Gigante
     btnFonte.addEventListener("click", () => {
         const estaAtivo = htmlElement.classList.toggle("texto-gigante");
         
-        // Atualiza os atributos de acessibilidade para leitores de ecrã
+        // Atualiza os atributos de acessibilidade para leitores de ecra
         btnFonte.setAttribute("aria-pressed", estaAtivo);
         btnFonte.innerHTML = estaAtivo 
-            ? "<span>🔎</span> Texto Gigante (Desativar)" 
-            : "<span>🔎</span> Texto Gigante (Ativar)";
+            ? "<span></span> Texto Gigante (Desativar)" 
+            : "<span></span> Texto Gigante (Ativar)";
     });
 
     // Ativar / Desativar Alto Contraste
