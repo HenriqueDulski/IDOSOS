@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Segura - Guia Prático para a Terceira Idade</title>
+    <!-- Ligação para o ficheiro de estilos CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Ligação para o script de comportamento JS externo (carregado de forma segura no final) -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Link de acessibilidade para navegação via teclado / leitores de ecrã -->
+    <a href="#conteudo-principal" class="pular-conteudo">Ir direto para as Dicas Principais</a>
+
+    <!-- Barra de Ferramentas de Acessibilidade -->
+    <div class="barra-acessibilidade">
+        <button id="btn-fonte" class="btn-acessibilidade" aria-pressed="false" aria-label="Ativar tamanho de texto gigante">
+            <span>🔎</span> Texto Gigante (Ativar)
+        </button>
+        <button id="btn-contraste" class="btn-acessibilidade" aria-pressed="false" aria-label="Ativar modo de alto contraste escuro">
+            <span>🌙</span> Alto Contraste (Ativar)
+        </button>
+    </div>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <div class="container">
+            <h1>🔒 Internet Segura</h1>
+            <p>O seu espaço fácil e acessível para aprender a navegar na internet com total tranquilidade, protegendo as suas contas e o seu dinheiro.</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container" id="conteudo-principal">
+
+        <h2 class="secao-titulo">Dicas Práticas de Proteção</h2>
+
+        <!-- DICA 1: LIGAÇÕES E BANCO -->
+        <details class="card-dica" open>
+            <summary>
+                <span>📞 1. Cuidado com Chamadas Suspeitas (Falso Gerente)</span>
+            </summary>
+            <div class="conteudo-dica">
+                <p>O golpe da falsa central telefónica acontece quando os criminosos ligam fingindo ser funcionários do seu banco, informando que existe uma compra suspeita no seu cartão.</p>
+                <ul class="lista-regras">
+                    <li class="perigo"><strong>Eles vão pedir para confirmar dados confidenciais</strong>, como palavras-passe de acesso ou o código de segurança do cartão.</li>
+                    <li><strong>O banco nunca telefona</strong> a pedir as suas credenciais ou a solicitar que faça transferências para "proteger" ou "devolver" o seu dinheiro.</li>
+                    <li><strong>O que fazer:</strong> Se receber este tipo de chamada, desligue imediatamente. Utilize o número oficial que está impresso no verso do seu cartão físico para falar com o seu banco através de outro telefone.</li>
+                </ul>
+                <div class="alerta-visual">
+                    ⚠️ Importante: Desligue e aguarde 5 minutos antes de ligar para o banco, pois os burlões podem prender a sua linha telefónica ativa para simular o atendimento real.
+                </div>
+            </div>
+        </details>
+
+        <!-- DICA 2: WHATSAPP -->
+        <details class="card-dica">
+            <summary>
+                <span>💬 2. Como Proteger o seu WhatsApp</span>
+            </summary>
+            <div class="conteudo-dica">
+                <p>Os criminosos tentam roubar contas de WhatsApp para pedir dinheiro emprestado aos seus amigos e familiares, fazendo-se passar por si.</p>
+                <ul class="lista-regras">
+                    <li><strong>Ative a Verificação em Duas Etapas:</strong> Este recurso cria um código numérico pessoal que o WhatsApp pedirá de tempos em tempos, impedindo acessos não autorizados.</li>
+                    <li class="perigo"><strong>Nunca partilhe códigos recebidos por SMS</strong> com ninguém. Esse código dá acesso total à sua conta.</li>
+                    <li><strong>A foto do contacto:</strong> Se um familiar lhe enviar uma mensagem de um número diferente a dizer que mudou de telemóvel e a pedir dinheiro, não envie. Ligue para o número antigo dele para confirmar primeiro.</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- DICA 3: PALAVRAS-PASSE -->
+        <details class="card-dica">
+            <summary>
+                <span>🔑 3. Criar Palavras-passe que Funcionam</span>
+            </summary>
+            <div class="conteudo-dica">
+                <p>Uma palavra-passe segura não tem de ser impossível de memorizar. Só precisa de ser inteligente.</p>
+                <ul class="lista-regras">
+                    <li><strong>Não utilize dados óbvios:</strong> Evite datas de nascimento, nomes de netos, filhos, animais de estimação ou sequências simples como "123456".</li>
+                    <li><strong>Use a tática da frase secreta:</strong> Pense numa frase longa e utilize apenas as primeiras letras de cada palavra. Exemplo: "O Meu Primeiro Carro Foi Um Fusca Antigo" transforma-se na palavra-passe super segura: <em>OMPCFUFA</em>.</li>
+                    <li><strong>Aponte num papel:</strong> Guardar as suas chaves escritas num caderno físico guardado numa gaveta segura em sua casa é muito mais seguro do que deixá-las guardadas nas notas do telemóvel.</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- DICA 4: COMPRAS E PAGAMENTOS -->
+        <details class="card-dica">
+            <summary>
+                <span>🛒 4. Compras Online e Pagamentos Seguros</span>
+            </summary>
+            <div class="conteudo-dica">
+                <p>Fazer compras na internet é muito prático, desde que utilize os meios de pagamento corretos e seguros.</p>
+                <ul class="lista-regras">
+                    <li><strong>Cuidado com promoções boas demais:</strong> Preços excessivamente baixos são quase sempre armadilhas para roubar os seus dados de pagamento.</li>
+                    <li><strong>Cartão Virtual:</strong> Sempre que comprar em sites ou aplicações, utilize um "Cartão de Crédito Virtual" temporário (como os gerados pelo MB Way ou pelo app do seu banco).</li>
+                    <li><strong>Confirmação de Dados:</strong> Antes de validar qualquer pagamento, leia com muita atenção o ecrã do seu telemóvel para confirmar o destinatário e o valor exato.</li>
+                </ul>
+            </div>
+        </details>
+
+        <!-- SEÇÃO INTERATIVA: SIMULADOR DE SEGURANÇA (QUIZ) -->
+        <section class="quiz-container">
+            <h2 class="quiz-pergunta">🎮 Desafio Prático: O que faria nesta situação?</h2>
+            <p style="margin-bottom: 25px;">Imagine que recebeu uma mensagem no telemóvel a dizer que ganhou um prémio de 1.000€ e que, para o receber, só precisa de clicar num link azul associado.</p>
+            
+            <!-- Botões de Opção do Quiz -->
+            <button class="quiz-opcao-btn" data-opcao="errada">
+                <strong>Opção A:</strong> Clico no link azul rapidamente para não perder a oportunidade e sigo as instruções indicadas.
+            </button>
+
+            <button class="quiz-opcao-btn" data-opcao="correta">
+                <strong>Opção B:</strong> Não clico. Apago a mensagem imediatamente e pergunto a alguém de confiança se aquilo pode ser uma tentativa de burla.
+            </button>
+
+            <!-- Zona de Feedback Dinâmico (Anunciado automaticamente para leitores de ecrã) -->
+            <div id="quiz-feedback" class="resposta-feedback" aria-live="polite"></div>
+        </section>
+
+        <!-- SEÇÃO DE CONTACTOS DE EMERGÊNCIA -->
+        <section class="painel-emergencia">
+            <h3>🚨 Desconfia que foi vítima de uma burla?</h3>
+            <p>Se acha que partilhou alguma senha por engano ou detetou movimentos estranhos na sua conta, fale com alguém de confiança ou contacte as autoridades de imediato.</p>
+            <a href="tel:112" class="btn-ligar" aria-label="Ligar para o Número de Emergência Nacional 112">Ligar para a Emergência (112)</a>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p><strong>Guia da Internet Segura</strong> - Desenvolvido para apoiar a nossa comunidade.</p>
+            <p>Partilhe este guia com os seus amigos e familiares através do WhatsApp!</p>
+        </div>
+    </footer>
+
+</body>
+</html>
