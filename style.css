@@ -1,7 +1,6 @@
-/* Fonte grande e limpa para facilitar a leitura */
 .corpo-pagina {
     font-family: Arial, sans-serif;
-    font-size: 22px;
+    font-size: 24px;
     background-color: #f4f4f4;
     color: #333333;
     margin: 0;
@@ -19,7 +18,7 @@
 }
 
 .titulo-principal {
-    font-size: 34px;
+    font-size: 36px;
     color: #1a1a1a;
     margin: 0;
 }
@@ -45,7 +44,7 @@
 }
 
 .texto-importante {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
     color: #222222;
 }
@@ -63,13 +62,13 @@
 }
 
 .titulo-dica {
-    font-size: 28px;
+    font-size: 30px;
     color: #d9534f;
     margin-top: 0;
 }
 
 .texto-dica {
-    font-size: 22px;
+    font-size: 24px;
     color: #444444;
 }
 
@@ -79,7 +78,7 @@
 }
 
 .botao-acao {
-    font-size: 24px;
+    font-size: 26px;
     padding: 16px 32px;
     background-color: #28a745;
     color: #ffffff;
@@ -93,7 +92,6 @@
     background-color: #218838;
 }
 
-/* Regras para o Modo de Alto Contraste */
 .corpo-pagina.alto-contraste {
     background-color: #000000;
     color: #ffffff;
