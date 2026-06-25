@@ -6,14 +6,14 @@
     --bg-card: #ffffff;
     --texto-principal: #1a2530;
     --texto-secundario: #4a5568;
-    --cor-primaria: #004694;
+    --cor-primaria: #004694; /* Azul de alto contraste para excelente leitura */
     --cor-primaria-hover: #002f6c;
     --cor-sucesso: #1b6d3a;
     --cor-sucesso-bg: #e6f4ea;
     --cor-alerta: #c53030;
     --cor-alerta-bg: #fff5f5;
     --borda: #cbd5e1;
-    --fonte-tamanho-base: 22px;
+    --fonte-tamanho-base: 22px; /* Fonte naturalmente grande para facilitar a leitura */
 }
 
 /* ==========================================================================
@@ -56,5 +56,356 @@ body {
     background-color: var(--bg-principal);
     color: var(--texto-principal);
     padding-bottom: 80px;
-    transition: background-color
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Foco de teclado ultra visível para navegação por acessibilidade */
+*:focus-visible {
+    outline: 5px solid #ff9800;
+    outline-offset: 4px;
+}
+
+/* Link de salto rápido para leitores de ecrã */
+.pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    background: #ff9800;
+    color: #000;
+    padding: 15px;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.pular-conteudo:focus {
+    top: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   4. CABEÇALHO E BARRA DE ACESSIBILIDADE
+   ========================================================================== */
+header {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 8px solid #001f42;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #f0f7ff;
+}
+
+/* Barra superior com os botões controladores */
+.barra-acessibilidade {
+    background-color: #e2e8f0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #cbd5e1;
+}
+
+/* Botões grandes e fáceis de carregar */
+.btn-acessibilidade {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    border: 3px solid #1a2530;
+    color: #1a2530;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-acessibilidade:hover {
+    background-color: #f1f5f9;
+}
+
+.btn-acessibilidade:active {
+    transform: scale(0.97);
+}
+
+/* Estilo visual para quando o botão está ativado/pressionado */
+.btn-acessibilidade[aria-pressed="true"] {
+    background-color: #1a2530;
+    color: #ffffff;
+    border-color: #ff9800;
+}
+
+/* ==========================================================================
+   5. CARDS DE INFORMAÇÃO (DICAS DE SEGURANÇA)
+   ========================================================================== */
+.secao-titulo {
+    font-size: 1.8rem;
+    margin: 40px 0 20px 0;
+    color: var(--cor-primaria);
+    border-left: 8px solid var(--cor-primaria);
+    padding-left: 15px;
+}
+
+.card-dica {
+    background-color: var(--bg-card);
+    border: 3px solid var(--borda);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-dica:hover {
+    border-color: var(--cor-primaria);
+}
+
+/* Aba interativa de clique (Summary) */
+summary {
+    padding: 24px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-card);
+    user-select: none;
+}
+
+summary::after {
+    content: "➕ Expandir";
+    font-size: 0.9rem;
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+details[open] summary {
+    border-bottom: 3px solid var(--borda);
+    background-color: var(--bg-principal);
+}
+
+details[open] summary::after {
+    content: "➖ Fechar";
+    background-color: var(--texto-secundario);
+}
+
+.conteudo-dica {
+    padding: 30px;
+    background-color: var(--bg-card);
+}
+
+.conteudo-dica p {
+    margin-bottom: 20px;
+}
+
+.lista-regras {
+    list-style-type: none;
+}
+
+.lista-regras li {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 20px;
+}
+
+.lista-regras li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.4rem;
+}
+
+.lista-regras li.perigo::before {
+    content: "❌";
+}
+
+.alerta-visual {
+    background-color: var(--cor-alerta-bg);
+    color: var(--cor-alerta);
+    border: 3px solid var(--cor-alerta);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   6. SIMULADOR INTERATIVO (QUIZ)
+   ========================================================================== */
+.quiz-container {
+    background-color: var(--bg-card);
+    border: 4px solid var(--cor-primaria);
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.quiz-pergunta {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: var(--cor-primaria);
+}
+
+/* Botões de opção do Quiz */
+.quiz-opcao-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--bg-principal);
+    border: 3px solid var(--borda);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: var(--texto-principal);
+    transition: all 0.2s ease;
+}
+
+.quiz-opcao-btn:hover {
+    border-color: var(--cor-primaria);
+    background-color: var(--bg-card);
+}
+
+/* Estilo do botão quando selecionado correto */
+.quiz-opcao-btn.selecionado-correto {
+    border-color: var(--cor-sucesso);
+    background-color: var(--cor-sucesso-bg);
+    color: var(--cor-sucesso);
+    font-weight: bold;
+}
+
+/* Estilo do botão quando selecionado errado */
+.quiz-opcao-btn.selecionado-errado {
+    border-color: var(--cor-alerta);
+    background-color: var(--cor-alerta-bg);
+    color: var(--cor-alerta);
+    font-weight: bold;
+}
+
+/* Estilo dinâmico das caixas de feedback */
+.resposta-feedback {
+    display: none; /* Controlado via JS */
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    font-weight: bold;
+    border: 3px solid;
+}
+
+.resposta-feedback.visivel {
+    display: block;
+}
+
+.resposta-feedback.sucesso {
+    background-color: var(--cor-sucesso-bg);
+    border-color: var(--cor-sucesso);
+    color: var(--cor-sucesso);
+}
+
+.resposta-feedback.erro {
+    background-color: var(--cor-alerta-bg);
+    border-color: var(--cor-alerta);
+    color: var(--cor-alerta);
+}
+
+/* ==========================================================================
+   7. BLOCO DE EMERGÊNCIA
+   ========================================================================== */
+.painel-emergencia {
+    background-color: #ffeb3b;
+    color: #000000;
+    border: 4px solid #f57f17;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.painel-emergencia h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.btn-ligar {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 15px;
+    border-bottom: 6px solid #b71c1c;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-ligar:hover {
+    background-color: #b71c1c;
+}
+
+/* ==========================================================================
+   8. RODAPÉ DO WEBSITE
+   ========================================================================== */
+footer {
+    background-color: #1a2530;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    font-size: 1.1rem;
+    border-top: 6px solid var(--cor-primaria);
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   9. REGRAS DE RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .btn-acessibilidade {
+        width: 100%;
+        justify-content: center;
+    }
+    summary::after {
+        content: "➕";
+        padding: 6px 12px;
+    }
+    details[open] summary::after {
+        content: "➖";
+    }
 }
