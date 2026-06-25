@@ -7,7 +7,6 @@
     margin: 0;
     padding: 20px;
     line-height: 1.6;
-    transition: all 0.3s ease;
 }
 
 .cabecalho {
@@ -121,6 +120,12 @@
     border: 3px solid #ffffff;
 }
 
+/* Correcao do bug de hover no alto contraste */
+.corpo-pagina.alto-contraste .botao-opcao:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .corpo-pagina.alto-contraste .texto-importante {
     color: #ffffff;
 }
@@ -144,7 +149,13 @@
     border: 4px solid #ffff00;
 }
 
-/* Modo Fonte Alterada (Maior e Serifada para teste de leitura) */
+/* Correcao do bug de hover para o botao de acao */
+.corpo-pagina.alto-contraste .botao-acao:hover {
+    background-color: #ffff00;
+    color: #000000;
+}
+
+/* Modo Fonte Alterada */
 .corpo-pagina.fonte-alterada {
     font-family: "Times New Roman", Times, serif;
     font-size: 30px;
