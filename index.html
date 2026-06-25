@@ -1,124 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Segura - Guia Prático para a Terceira Idade</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Guia de Seguranca</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body class="corpo-pagina">
 
-    <a href="#conteudo-principal" class="pular-conteudo">Ir direto para as Dicas Principais</a>
-
-    <div class="barra-acessibilidade">
-        <button id="botao-fonte" class="botao-acessibilidade" aria-pressed="false" aria-label="Ativar tamanho de texto gigante">
-            <span>🔎</span> Texto Gigante (Ativar)
-        </button>
-        <button id="botao-contraste" class="botao-acessibilidade" aria-pressed="false" aria-label="Ativar modo de alto contraste escuro">
-            <span>🌙</span> Alto Contraste (Ativar)
-        </button>
-    </div>
-
-    <header>
-        <div class="contentor">
-            <h1>🔒 Internet Segura</h1>
-            <p>O seu espaço fácil e acessível para aprender a navegar na internet com total tranquilidade, protegendo as suas contas e o seu dinheiro.</p>
-        </div>
+    <header class="cabecalho">
+        <h1 class="titulo-principal">Guia de Seguranca para Idosos</h1>
+        <button id="botao-contraste" class="botao-opcao">Alternar Alto Contraste</button>
     </header>
-
-    <main class="contentor" id="conteudo-principal">
-
-        <h2 class="secao-titulo">Dicas Práticas de Proteção</h2>
-
-        <details class="cartao-dica" open>
-            <summary>
-                <span>📞 1. Cuidado com Chamadas Suspeitas (Falso Gerente)</span>
-            </summary>
-            <div class="conteudo-dica">
-                <p>O golpe da falsa central telefónica acontece quando os criminosos ligam fingindo ser funcionários do seu banco, informando que existe uma compra suspeita no seu cartão.</p>
-                <ul class="lista-regras">
-                    <li class="perigo"><strong>Eles vão pedir para confirmar dados confidenciais</strong>, como palavras-passe de acesso ou o código de segurança do cartão.</li>
-                    <li><strong>O banco nunca telefona</strong> a pedir as suas credenciais ou a solicitar que faça transferências para "proteger" ou "devolver" o seu dinheiro.</li>
-                    <li><strong>O que fazer:</strong> Se receber este tipo de chamada, desligue imediatamente. Utilize o número oficial que está impresso no verso do seu cartão físico para falar com o seu banco através de outro telefone.</li>
-                </ul>
-                <div class="alerta-visual">
-                    ⚠️ Importante: Desligue e aguarde 5 minutos antes de ligar para o banco, pois os burlões podem prender a sua linha telefónica ativa para simular o atendimento real.
-                </div>
+    
+    <main class="conteudo-principal">
+        <section class="secao-introducao">
+            <p class="texto-importante">Aprenda a se proteger de golpes na internet e no telefone de forma simples.</p>
+        </section>
+        
+        <section class="secao-dicas">
+            <div class="cartao-dica">
+                <h2 class="titulo-dica">1. Nunca passe suas senhas</h2>
+                <p class="texto-dica">Bancos e empresas nao pedem senhas ou dados pessoais por telefone ou por mensagem de texto.</p>
             </div>
-        </details>
-
-        <details class="cartao-dica">
-            <summary>
-                <span>💬 2. Como Proteger o seu WhatsApp</span>
-            </summary>
-            <div class="conteudo-dica">
-                <p>Os criminosos tentam roubar contas de WhatsApp para pedir dinheiro emprestado aos seus amigos e familiares, fazendo-se passar por si.</p>
-                <ul class="lista-regras">
-                    <li><strong>Ative a Verificação em Duas Etapas:</strong> Este recurso cria um código numérico pessoal que o WhatsApp pedirá de tempos em tempos, impedindo acessos não autorizados.</li>
-                    <li class="perigo"><strong>Nunca partilhe códigos recebidos por SMS</strong> com ninguém. Esse código dá acesso total à sua conta.</li>
-                    <li><strong>A foto do contacto:</strong> Se um familiar lhe enviar uma mensagem de um número diferente a dizer que mudou de telemóvel e a pedir dinheiro, não envie. Ligue para o número antigo dele para confirmar primeiro.</li>
-                </ul>
-            </div>
-        </details>
-
-        <details class="cartao-dica">
-            <summary>
-                <span>🔑 3. Criar Palavras-passe que Funcionam</span>
-            </summary>
-            <div class="conteudo-dica">
-                <p>Uma palavra-passe segura não tem de ser impossível de memorizar. Só precisa de ser inteligente.</p>
-                <ul class="lista-regras">
-                    <li><strong>Não utilize dados óbvios:</strong> Evite datas de nascimento, nomes de netos, filhos, animais de estimação ou sequências simples como "123456".</li>
-                    <li><strong>Use a tática da frase secreta:</strong> Pense numa frase longa e utilize apenas as primeiras letras de cada palavra. Exemplo: "O Meu Primeiro Carro Foi Um Fusca Antigo" transforma-se na palavra-passe super segura: <em>OMPCFUFA</em>.</li>
-                    <li><strong>Aponte num papel:</strong> Guardar as suas chaves escritas num caderno físico guardado numa gaveta segura em sua casa é muito mais seguro do que deixá-las guardadas nas notas do telemóvel.</li>
-                </ul>
-            </div>
-        </details>
-
-        <details class="cartao-dica">
-            <summary>
-                <span>🛒 4. Compras Online e Pagamentos Seguros</span>
-            </summary>
-            <div class="conteudo-dica">
-                <p>Fazer compras na internet e muito pratico, desde que utilize os meios de pagamento corretos e seguros.</p>
-                <ul class="lista-regras">
-                    <li><strong>Cuidado com promocoes boas demais:</strong> Precos excessivamente baixos sao quase sempre armadilhas para roubar os seus dados de pagamento.</li>
-                    <li><strong>Cartao Virtual:</strong> Sempre que comprar em sites ou aplicacoes, utilize um "Cartao de Credito Virtual" temporario (como os gerados pelo MB Way ou pelo app do seu banco).</li>
-                    <li><strong>Confirmacao de Dados:</strong> Antes de validar qualquer pagamento, leia com muita atencao o ecra do seu telemovel para confirmar o destinatário e o valor exato.</li>
-                </ul>
-            </div>
-        </details>
-
-        <section class="questionario-bloco">
-            <h2 class="questionario-pergunta"> Desafio Pratico: O que faria nesta situacao?</h2>
-            <p style="margin-bottom: 25px;">Imagine que recebeu uma mensagem no telemovel a dizer que ganhou um premio de 1.000€ e que, para o receber, so precisa de clicar num link azul associado.</p>
             
-            <button class="questionario-opcao-botao" data-opcao="errada">
-                <strong>Opcao A:</strong> Clico no link azul rapidamente para nao perder a oportunidade e sigo as instrucoes indicadas.
-            </button>
-
-            <button class="questionario-opcao-botao" data-opcao="correta">
-                <strong>Opcao B:</strong> Nao clico. Apago a mensagem imediatamente e pergunto a alguem de confianca se aquilo pode ser uma tentativa de burla.
-            </button>
-
-            <div id="questionario-resultado" class="resposta-resultado" aria-live="polite"></div>
+            <div class="cartao-dica">
+                <h2 class="titulo-dica">2. Cuidado com links falsos</h2>
+                <p class="texto-dica">Nao clique em links que prometem brindes, premios ou descontos exagerados vindos de desconhecidos.</p>
+            </div>
+            
+            <div class="cartao-dica">
+                <h2 class="titulo-dica">3. Confirme com a familia</h2>
+                <p class="texto-dica">Se alguem pedir dinheiro urgente dizendo ser seu parente, desligue e ligue de volta para o numero antigo dele para confirmar.</p>
+            </div>
         </section>
 
-        <section class="painel-emergencia">
-            <h3> Desconfia que foi vitima de uma burla?</h3>
-            <p>Se acha que partilhou alguma senha por engano ou detetou movimentos estranhos na sua conta, fale com alguem de confianca ou contacte as autoridades de imediato.</p>
-            <a href="tel:112" class="botao-ligar" aria-label="Ligar para o Numero de Emergencia Nacional 112">Ligar para a Emergencia (112)</a>
+        <section class="secao-acoes">
+            <button class="botao-acao" onclick="alert('Ligue para o numero 190 se achar que foi vitima de um golpe.')">Precisa de Ajuda Urgente?</button>
         </section>
-
     </main>
 
-    <footer>
-        <div class="contentor">
-            <p><strong>Guia da Internet Segura</strong> - Desenvolvido para apoiar a nossa comunidade.</p>
-            <p>Partilhe este guia com os seus amigos e familiares através do WhatsApp!</p>
-        </div>
-    </footer>
-
+    <script src="controle.js"></script>
 </body>
 </html>

@@ -1,60 +1,137 @@
-/* ==========================================================================
-   1. VARIÁVEIS DE DESIGN (Tema Claro por Padrão)
-   ========================================================================== */
-:root {
-    --bg-principal: #f4f7fa;
-    --bg-card: #ffffff;
-    --texto-principal: #1a2530;
-    --texto-secundario: #4a5568;
-    --cor-primaria: #004694;
-    --cor-primaria-hover: #002f6c;
-    --cor-sucesso: #1b6d3a;
-    --cor-sucesso-bg: #e6f4ea;
-    --cor-alerta: #c53030;
-    --cor-alerta-bg: #fff5f5;
-    --borda: #cbd5e1;
-    --fonte-tamanho-base: 22px;
-}
-
-/* ==========================================================================
-   2. ESTADOS ATIVADOS POR JAVASCRIPT
-   ========================================================================== */
-
-/* Quando o modo "Texto Gigante" está ativo */
-html.texto-gigante {
-    --fonte-tamanho-base: 28px;
-}
-
-/* Quando o modo "Alto Contraste" está ativo */
-html.alto-contraste {
-    --bg-principal: #0d131a;
-    --bg-card: #18222f;
-    --texto-principal: #f8fafc;
-    --texto-secundario: #cbd5e1;
-    --cor-primaria: #4299e1;
-    --cor-primaria-hover: #63b3ed;
-    --borda: #4a5568;
-    --cor-sucesso: #81e6d9;
-    --cor-sucesso-bg: #1a2d2d;
-    --cor-alerta: #feb2b2;
-    --cor-alerta-bg: #2d1a1a;
-}
-
-/* ==========================================================================
-   3. ESTILOS BASE E ACESSIBILIDADE
-   ========================================================================== */
-* {
-    box-sizing: border-box;
+/* Fonte grande e limpa para facilitar a leitura */
+.corpo-pagina {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    background-color: #f4f4f4;
+    color: #333333;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    font-size: var(--fonte-tamanho-base);
-    line-height: 1.6;
-    background-color: var(--bg-principal);
-    color: var(--texto-principal);
-    padding-bottom: 80px;
-    transition: background-color
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #cccccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.titulo-principal {
+    font-size: 34px;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.botao-opcao {
+    font-size: 20px;
+    padding: 12px 24px;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao-opcao:hover {
+    background-color: #004085;
+}
+
+.conteudo-principal {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.texto-importante {
+    font-size: 26px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.secao-dicas {
+    margin-top: 30px;
+}
+
+.cartao-dica {
+    background-color: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.titulo-dica {
+    font-size: 28px;
+    color: #d9534f;
+    margin-top: 0;
+}
+
+.texto-dica {
+    font-size: 22px;
+    color: #444444;
+}
+
+.secao-acoes {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.botao-acao {
+    font-size: 24px;
+    padding: 16px 32px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao-acao:hover {
+    background-color: #218838;
+}
+
+/* Regras para o Modo de Alto Contraste */
+.corpo-pagina.alto-contraste {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.corpo-pagina.alto-contraste .cabecalho {
+    border-bottom: 4px solid #ffff00;
+}
+
+.corpo-pagina.alto-contraste .titulo-principal {
+    color: #ffff00;
+}
+
+.corpo-pagina.alto-contraste .botao-opcao {
+    background-color: #ffff00;
+    color: #000000;
+    border: 3px solid #ffffff;
+}
+
+.corpo-pagina.alto-contraste .texto-importante {
+    color: #ffffff;
+}
+
+.corpo-pagina.alto-contraste .cartao-dica {
+    background-color: #000000;
+    border: 3px solid #ffff00;
+}
+
+.corpo-pagina.alto-contraste .titulo-dica {
+    color: #ffff00;
+}
+
+.corpo-pagina.alto-contraste .texto-dica {
+    color: #ffffff;
+}
+
+.corpo-pagina.alto-contraste .botao-acao {
+    background-color: #000000;
+    color: #ffff00;
+    border: 4px solid #ffff00;
 }
