@@ -1,3 +1,4 @@
+/* Estilo Padrao */
 .corpo-pagina {
     font-family: Arial, sans-serif;
     font-size: 24px;
@@ -6,6 +7,7 @@
     margin: 0;
     padding: 20px;
     line-height: 1.6;
+    transition: all 0.3s ease;
 }
 
 .cabecalho {
@@ -15,12 +17,19 @@
     border-bottom: 3px solid #cccccc;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .titulo-principal {
     font-size: 36px;
     color: #1a1a1a;
     margin: 0;
+}
+
+.grupo-botoes {
+    display: flex;
+    gap: 10px;
 }
 
 .botao-opcao {
@@ -58,17 +67,7 @@
     border: 2px solid #dddddd;
     border-radius: 8px;
     padding: 24px;
-    margin-bottom: 24pxconst botaoContraste = document.getElementById('botao-contraste');
-const botaoAjuda = document.getElementById('botao-ajuda');
-const corpoPagina = document.body;
-
-botaoContraste.addEventListener('click', function() {
-    corpoPagina.classList.toggle('alto-contraste');
-});
-
-botaoAjuda.addEventListener('click', function() {
-    alert('Ligue para o numero 190 se achar que foi vitima de um golpe.');
-});;
+    margin-bottom: 24px;
 }
 
 .titulo-dica {
@@ -102,6 +101,7 @@ botaoAjuda.addEventListener('click', function() {
     background-color: #218838;
 }
 
+/* Modo de Alto Contraste */
 .corpo-pagina.alto-contraste {
     background-color: #000000;
     color: #ffffff;
@@ -142,4 +142,31 @@ botaoAjuda.addEventListener('click', function() {
     background-color: #000000;
     color: #ffff00;
     border: 4px solid #ffff00;
+}
+
+/* Modo Fonte Alterada (Maior e Serifada para teste de leitura) */
+.corpo-pagina.fonte-alterada {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+}
+
+.corpo-pagina.fonte-alterada .titulo-principal {
+    font-size: 42px;
+}
+
+.corpo-pagina.fonte-alterada .texto-importante {
+    font-size: 34px;
+}
+
+.corpo-pagina.fonte-alterada .titulo-dica {
+    font-size: 36px;
+}
+
+.corpo-pagina.fonte-alterada .texto-dica {
+    font-size: 30px;
+}
+
+.corpo-pagina.fonte-alterada .botao-opcao,
+.corpo-pagina.fonte-alterada .botao-acao {
+    font-size: 28px;
 }
